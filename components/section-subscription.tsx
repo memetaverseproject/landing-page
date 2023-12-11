@@ -6,7 +6,7 @@ export default function SectionSubscription() {
   return (
     <div
       className="w-full h-[1000px] flex flex-col items-center justify-center relative overflow-hidden">
-      <Image className="background h-full w-auto object-cover absolute" src={backgroundImage} alt="" />
+      <Image className="background h-full w-full object-cover absolute" src={backgroundImage} alt="" />
       <svg className="mb-[133px]"
            width="1920"
            height="63"
