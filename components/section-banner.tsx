@@ -2,7 +2,6 @@ import MemetaverseLogo from '../assets/logo/memetaverse.png'
 import U2ULogo from '../assets/logo/ultra_unicorn.png'
 import BannerBG from '../assets/banner_bg.png'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
 import Button from './common/Button'
 
 export default function SectionBanner() {
