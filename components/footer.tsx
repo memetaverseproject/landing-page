@@ -1,10 +1,26 @@
 import Image from 'next/image'
 import logo from '@/assets/icons/logo.svg'
+import twitterIcon from '@/assets/icons/twitter.svg'
+import discordIcon from '@/assets/icons/discord.svg'
+import facebookIcon from '@/assets/icons/facebook.svg'
+import instagramIcon from '@/assets/icons/instagram.svg'
+import telegramIcon from '@/assets/icons/telegram.svg'
 
 export default function MainFooter() {
+  const links = [
+    { label: 'ABOUT', href: '#' },
+    { label: 'TEAM', href: '#' },
+    { label: 'TEAM', href: '#' },
+    { label: 'FAQs', href: '#' },
+    { label: 'ECOSYSTEM', href: '#' },
+    { label: 'DOCUMENTS', href: '#' },
+    { label: 'CONTACT US', href: '#' },
+    { label: 'SOCIAL HUB', href: '#' },
+    { label: 'BLOG', href: '#' }
+  ]
   return (
     <footer className="main-footer">
-      <div className="w-full flex items-center gap-10">
+      <div className="w-full flex items-center gap-10 mb-[88px]">
         <svg
           className="flex-1"
           width="743"
@@ -62,6 +78,70 @@ export default function MainFooter() {
             </linearGradient>
           </defs>
         </svg>
+      </div>
+
+      <div className="flex items-start justify-evenly gap-10 mb-[68px]">
+        <div className="flex-1 max-w-[400px]">
+          <p className="text-2xl underline mb-6">
+            JOIN US
+          </p>
+          <p className="text-body-1 font-svn text-[rgba(255, 255, 255, 0.80)] text-justify">
+            MEMETAVERSE is a multidimensional open-world platform where myriad Web3 projects can actively engage in
+            community and enable users to partake in myriad immersive activities within the MEMETAVERSE platform.
+          </p>
+        </div>
+        <div className="flex-1 max-w-[400px]">
+          <p className="text-2xl underline mb-6">
+            LINKS
+          </p>
+          <div className="flex flex-wrap gap-y-6">
+            {
+              links.map(link => (
+                <a
+                  className="w-1/3 font-svn text-body-2 italic font-semibold"
+                  target="_blank"
+                  rel="noopener"
+                  href={link.href}
+                  key={link.label}>
+                  {link.label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <div className="flex-1 max-w-[400px]">
+          <p className="text-2xl underline mb-6">
+            FOLLOW US
+          </p>
+
+          <div className="flex items-center gap-4">
+            <a href="#" className="icon-wrapper">
+              <Image src={twitterIcon} alt="twitter" />
+            </a>
+            <a href="#" className="icon-wrapper">
+              <Image src={discordIcon} alt="discord" />
+            </a>
+            <a href="#" className="icon-wrapper">
+              <Image src={facebookIcon} alt="facebook" />
+            </a>
+            <a href="#" className="icon-wrapper">
+              <Image src={instagramIcon} alt="instagram" />
+            </a>
+            <a href="#" className="icon-wrapper">
+              <Image src={telegramIcon} alt="telegram" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="w-full h-[1px]"
+        style={{ background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.85) 49.48%, rgba(255, 255, 255, 0.00) 100%)' }} />
+
+      <div className="py-8">
+        <p className="text-center text-subtitle-1 font-svn">
+          © All rights reserved. MEMETAVERSE
+        </p>
       </div>
     </footer>
   )

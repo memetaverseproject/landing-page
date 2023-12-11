@@ -36,7 +36,11 @@ const config: Config = {
         }],
         'subtitle-3': ['12px', {
           fontWeight: 600,
-        }]
+        }],
+        'body-1': '18px',
+        'body-2': '16px',
+        'body-3': '14px',
+        'body-4': '12px'
       }
     },
     fontFamily: {
