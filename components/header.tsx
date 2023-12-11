@@ -1,6 +1,6 @@
 export default function MainHeader() {
   return (
-    <nav>
+    <nav className="main-header">
       HEADER
     </nav>
   )
