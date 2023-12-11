@@ -20,6 +20,23 @@
   }
 }
 
+
+@font-face {
+  font-family: 'aAtmospheric';
+  src: url('/fonts/aAtmospheric.ttf');
+}
+
+@font-face {
+  font-family: 'ChakraPetch';
+  src: url('/fonts/ChakraPetch-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SVN-Gilroy';
+  src: url('/fonts/SVN-Gilroy-Regular.ttf');
+}
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

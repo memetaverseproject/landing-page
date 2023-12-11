@@ -39,6 +39,11 @@ const config: Config = {
         }]
       }
     },
+    fontFamily: {
+      atmospheric: ['aAtmospheric', 'sans'],
+      chakra: ['ChakraPetch', 'sans'],
+      svn: ['SVN-Gilroy', 'sans']
+    }
   },
   plugins: [],
 }

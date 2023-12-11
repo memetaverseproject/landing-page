@@ -38,8 +38,8 @@ export default function MainHeader() {
       <div className="flex-1 flex items-center justify-center gap-3">
         <Image src={logo} alt="menu" />
         <div>
-          <p className="text-primary text-center text-[24px]">MEMETAVERSE</p>
-          <p className="text-primary text-center text-[10px]">AWAKEN CREATIVE GENIUSES</p>
+          <p className="text-primary text-center text-[24px] font-atmospheric">MEMETAVERSE</p>
+          <p className="text-primary text-center text-[10px] font-svn tracking-[4.4px]">AWAKEN CREATIVE GENIUSES</p>
         </div>
       </div>
 
