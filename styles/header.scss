@@ -4,4 +4,15 @@
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(8px);
   padding: 40px;
+
+  .icon-wrapper {
+    cursor: pointer;
+    background: (linear-gradient(91deg, rgba(142, 111, 231, .15) 0%, rgba(146, 61, 231, .15) 100%));
+    padding: 8px 16px;
+    clip-path: polygon(16px 0, 100% 0, 100% 50%, 100% 99%, 0 100%, 0 16px);
+
+    :hover {
+
+    }
+  }
 }
