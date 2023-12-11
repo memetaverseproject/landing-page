@@ -1,3 +1,5 @@
+'use client'
+
 import barchartIcon from '@/assets/icons/bar-chart.svg'
 import logo from '@/assets/icons/logo.svg'
 import walletIcon from '@/assets/icons/wallet.svg'
@@ -5,10 +7,27 @@ import discordIcon from '@/assets/icons/discord.svg'
 import twitterIcon from '@/assets/icons/twitter.svg'
 import messengerIcon from '@/assets/icons/messenger.svg'
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 export default function MainHeader() {
+  const handleScroll = () => {
+    const header = document.getElementById("main-header");
+    if (!header) return
+    const sticky = header.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+
   return (
-    <nav className="main-header flex items-center justify-between">
+    <nav className="main-header flex items-center justify-between" id="main-header">
       <div className="flex-1 text-subtitle-1">
         <button className="base-button clip-right flex items-center gap-2">
           <Image src={barchartIcon} alt="menu" />

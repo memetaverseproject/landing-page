@@ -1,9 +1,19 @@
 .main-header {
   width: 100%;
   height: $header-height;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
   padding: 40px;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+
+    .sticky + .content {
+      padding-top: $header-height;
+    }
+  }
 
   .icon-wrapper {
     cursor: pointer;
