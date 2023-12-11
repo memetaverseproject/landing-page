@@ -1,3 +1,4 @@
+"use client"
 import SectionBanner from '@/components/section-banner'
 
 export default function Home() {
