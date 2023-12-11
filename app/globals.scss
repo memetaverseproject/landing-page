@@ -5,6 +5,7 @@
 @import "styles/variables";
 @import "styles/header";
 @import "styles/button";
+@import "styles/subscription";
 
 :root {
   --foreground-rgb: 24, 8, 39;
@@ -28,7 +29,7 @@
 }
 
 body {
-  color: rgb(255, 255, 255);
+  color: white;
   background: linear-gradient(
           to bottom,
           transparent,

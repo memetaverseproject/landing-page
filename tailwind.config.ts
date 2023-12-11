@@ -40,7 +40,13 @@ const config: Config = {
         'body-1': '18px',
         'body-2': '16px',
         'body-3': '14px',
-        'body-4': '12px'
+        'body-4': '12px',
+        'display-1':  ['36px', {
+          fontWeight: 700,
+        }],
+        'display-2':  ['32px', {
+          fontWeight: 700,
+        }],
       }
     },
     fontFamily: {
