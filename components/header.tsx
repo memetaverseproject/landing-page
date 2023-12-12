@@ -32,11 +32,11 @@ export default function MainHeader() {
     <>
       <SidebarMenu isOpen={openMenu} onClose={() => setOpenMenu(false)} />
 
-      <nav className="main-header flex items-center justify-between" id="main-header">
+      <nav className="main-header p-3 laptop:p-10 flex items-center justify-between" id="main-header">
         <div className="flex-1 text-subtitle-1">
           <button className="base-button clip-right flex items-center gap-2" onClick={() => setOpenMenu(true)}>
             <Image className="w-7 h-7" src={barchartIcon} width={28} height={28} alt="menu" />
-            Menu
+            <span className="hidden laptop:block">Menu</span>
           </button>
         </div>
 
@@ -61,7 +61,7 @@ export default function MainHeader() {
 
           <button className="base-button clip-left flex items-center gap-2 text-subtitle-1">
             <Image className="w-7 h-7" width={28} height={28} src={joinNowIcon} alt="menu" />
-            Join now
+            <span className="hidden laptop:block">Join now</span>
           </button>
         </div>
       </nav>

@@ -16,7 +16,7 @@ interface Props {
 
 export default function PlaceCard({title, thumbnail, description, creator, status}: Props) {
   return (
-    <div className="p-[12px] h-[560px]">
+    <div className="laptop:p-[12px] h-[560px]">
       <Image
         src={thumbnail}
         alt={`Places ${title}`}

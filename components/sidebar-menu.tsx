@@ -19,10 +19,10 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
   ]
 
   return (
-    <div className="sidebar-menu">
+    <>
       <div className={`sidebar-overlay ${isOpen ? 'block' : 'hidden'}`} onClick={onClose} />
-      <div className={`sidebar-content transition-all py-10 relative ${isOpen ? 'open' : ''}`}>
-        <button className="base-button clip-right absolute right-[-72px]" onClick={onClose}>
+      <div className={`sidebar-content laptop:w-[436px] w-full transition-all py-14 laptop:py-10 ${isOpen ? 'open' : ''}`}>
+        <button className="base-button  top-[20px] absolute right-0 laptop:right-[-50px]" onClick={onClose}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -50,9 +50,9 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
           }
         </ul>
 
-        <div className="w-full relative">
+        <div className="w-full relative overflow-x-hidden">
           <Image className="w-full" width={356} src={HighlightCardBg} alt="" />
-          <div className="w-[308px] absolute bottom-[64px] left-[64px]">
+          <div className="w-full p-7 laptop:p-0 max-w-[308px] laptop:absolute laptop:bottom-[64px] laptop:left-[64px]">
             <p className="text-display-2 font-chakra uppercase">Big Gift Daily</p>
             <div className="bg-white h-[2px] w-10 mb-6" />
             <p className="text-heading-3 font-svn capitalizemb-3">
@@ -74,6 +74,6 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

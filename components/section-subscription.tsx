@@ -42,25 +42,27 @@ export default function SectionSubscription() {
         </defs>
       </svg>
 
-      <div className="subscription-box-wrapper">
-        <div className="hexagon" />
-        <div className="small-hexagon p-10 laptop:p-14">
-          <p className="uppercase text-white text-display-1-mobile laptop:text-display-1 font-chakra text-center mb-3"
-             style={{ textShadow: '2px 2px 0px #5A01FF' }}>
-            follow us for more info
-          </p>
-          <p className="text-heading-5 laptop:text-heading-4 text-white text-center font-svn mb-7 laptop:mb-10">
-            Subscribe to the MEMETAVERSE newsletter and don't miss miss out on anything.
-          </p>
+      <div className="px-[12px] laptop:px-0 w-full">
+        <div className="subscription-box-wrapper">
+          <div className="hexagon" />
+          <div className="small-hexagon p-10 laptop:p-14">
+            <p className="uppercase text-white text-display-1-mobile laptop:text-display-1 font-chakra text-center mb-3"
+               style={{ textShadow: '2px 2px 0px #5A01FF' }}>
+              follow us for more info
+            </p>
+            <p className="text-heading-5 laptop:text-heading-4 text-white text-center font-svn mb-7 laptop:mb-10">
+              Subscribe to the MEMETAVERSE newsletter and don't miss miss out on anything.
+            </p>
 
-          <div className="max-w-[600px] w-full mx-auto flex items-center bg-[#463557] pr-1">
-            <input
-              placeholder="Ex: youremail@gmail.com"
-              className="w-full h-full text-white placeholder:text-[rgba(255, 255, 255, 0.50)] bg-transparent border-none outline-none px-6 py-4" />
+            <div className="max-w-[600px] w-full mx-auto flex items-center bg-[#463557] pr-1">
+              <input
+                placeholder="Ex: youremail@gmail.com"
+                className="w-full h-full text-white placeholder:text-[rgba(255, 255, 255, 0.50)] bg-transparent border-none outline-none px-6 py-4" />
 
-            <button className="base-button clip-left">
-              <Image src={sendIcon} alt="send" />
-            </button>
+              <button className="base-button clip-left">
+                <Image src={sendIcon} alt="send" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

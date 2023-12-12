@@ -9,7 +9,7 @@ import SectionCasino from '@/components/section-casino'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden">
       <SectionBanner />
       <SectionIntroduction />
       <SectionPlacesEvents />

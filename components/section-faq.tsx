@@ -48,7 +48,7 @@ export default function SectionFaq() {
         filter: 'blur(150px)'
       }} />
 
-      <div className="w-full flex flex-col laptop:flex-row items-center justify-center">
+      <div className="w-full px-[12px] laptop:px-0 flex flex-col laptop:flex-row items-center justify-center">
         <div className="flex-1 max-w-[658px]">
           <div className="inline-flex items-end gap-3 mb-4">
             <div className="bg-white w-6 h-0.5" />

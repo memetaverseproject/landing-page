@@ -82,15 +82,15 @@ const PlacesMock = [
 export default function SectionPlacesEvents() {
   const [tab, setTab] = useState("places")
   return (
-    <div className="flex flex-col items-start pt-[112px] pb-[137px]">
+    <div className="flex flex-col items-start py-[64px] laptop:pt-[112px] laptop:pb-[137px]">
       <div className="px-[6%]">
         <SectionHeader title="Places & Events" />
       </div>
-      <div className="flex flex-1 flex-row justify-between items-center w-full px-[6%]">
+      <div className="flex flex-1 flex-col gap-y-3 laptop:flex-row justify-between laptop:items-center w-full px-[6%]">
         <div className="flex gap-[40px]">
           <span
             onClick={() => setTab('places')}
-            className="font-chakra text-[56px] font-bold leading-normal cursor-pointer border-b-[2px]"
+            className="font-chakra text-[32px] laptop:text-[56px] font-bold leading-normal cursor-pointer border-b-[2px]"
             style={{
               textShadow: tab === 'places' ? '3px 3px 0px #5A01FF' : '',
               color: tab === 'places' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.30)',
@@ -101,7 +101,7 @@ export default function SectionPlacesEvents() {
           </span>
           <span
             onClick={() => setTab('events')}
-            className="font-chakra text-[56px] font-bold leading-normal cursor-pointer border-b-[2px]"
+            className="font-chakra text-[32px] laptop:text-[56px] font-bold leading-normal cursor-pointer border-b-[2px]"
             style={{
               textShadow: tab === 'events' ? '3px 3px 0px #5A01FF' : '',
               color: tab === 'events' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.30)',
@@ -111,16 +111,21 @@ export default function SectionPlacesEvents() {
             EVENTS
           </span>
         </div>
-        <div>
+        <div className="hidden laptop:block">
           <Button>
             See All Places!
           </Button>
         </div>
       </div>
-      <div className="w-full pt-[50px] px-[6%] relative">
+      <div className="w-full pt-[24px] laptop:pt-[50px] px-[40px] laptop:px-[6%] relative">
         <Carousel additionalTransfrom={-12}>
           {PlacesMock.map((i, index) => <PlaceCard key={`places-${index}`} {...i} />)}
         </Carousel>
+      </div>
+      <div className="laptop:hidden w-full mt-7 flex justify-center">
+        <Button>
+          See All Places!
+        </Button>
       </div>
     </div>
   )

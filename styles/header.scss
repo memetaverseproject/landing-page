@@ -1,17 +1,28 @@
 .main-header {
   width: 100%;
-  height: $header-height;
-  padding: 40px;
+  height: 80px;
   position: fixed;
   top: 0;
   z-index: 100;
 
   + div {
-    padding-top: $header-height;
+    padding-top: 80px;
   }
 
   &.sticky {
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(8px);
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  .main-header {
+    height: $header-height;
+
+    + div {
+      padding-top: $header-height;
+    }
   }
 }

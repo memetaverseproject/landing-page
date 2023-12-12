@@ -16,7 +16,7 @@ export default function SectionEcosystem() {
   ]
 
   return (
-    <div className="w-full mb-32">
+    <div className="w-full mb-[64px] laptop:mb-32">
       <div className="w-full flex flex-col items-center">
         <div className="flex items-end gap-3 mb-4">
           <div className="bg-white w-6 h-0.5" />
@@ -31,13 +31,13 @@ export default function SectionEcosystem() {
           our ecosystem is incredibly diverse
         </p>
 
-        <div className="w-full overflow-x-auto">
+        <div className="w-full px-[12px] laptop:px-0 overflow-x-auto">
           <div className="w-fit laptop:w-full flex gap-4 justify-center items-center mx-auto">
             {
               features.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative w-[194px] h-[277px] laptop:w-[290px] laptop:h-[415px] flex items-end p-6 ${index % 2 === 0 ? 'laptop:mt-24 mt-10' : 'laptop:mb-24 mb-10'}`}
+                  className={`relative w-[194px] h-[277px] laptop:w-[290px] laptop:h-[415px] flex items-end p-6 ${index % 2 === 0 ? 'laptop:mt-24' : 'laptop:mb-24'}`}
                   style={{ backgroundImage: `url(${cardImage.src})` }}>
                   <svg
                     className="absolute w-[89px] h-[21px] laptop:w-[134px] laptop:h-[32px] left-[-10.5px] top-[16px]"
@@ -85,7 +85,7 @@ export default function SectionEcosystem() {
         </div>
       </div>
 
-      <svg className="mt-[-20px] mx-auto"
+      <svg className="w-full mt-[-20px] mx-auto"
            width="848"
            height="89"
            viewBox="0 0 848 89"

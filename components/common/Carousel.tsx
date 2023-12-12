@@ -79,23 +79,25 @@ export default function Carousel({children, responsiveConfig = responsive, addit
       </LibCarousel>
       <button
         onClick={() => ref && ref.current && ref.current.previous(1)}
-        className={`${isActiveLeft ? "opacity-100" : "opacity-[.3]"} min-w-[56px] min-h-[56px] cursor-pointer z-100 absolute left-[24px] top-[50%] -translate-y-[50%]`}
+        className={`${isActiveLeft ? "opacity-100" : "opacity-[.3]"} min-w-[56px] min-h-[56px] cursor-pointer z-100 absolute left-0 laptop:left-[24px] top-[50%] -translate-y-[50%]`}
       >
         <Image
           src={ArrowLeft}
           width={56}
           height={56}
+          className="w-[32px] h-[32px] laptop:w-[56px] laptop:h-[56px]"
           alt="Memetaverse"
         />
       </button>
       <button
         onClick={() => ref && ref.current && ref.current.next(1)}
-        className={`${isActiveRight ? "opacity-100" : "opacity-[.3]"} min-w-[56px] min-h-[56px] cursor-pointer z-100 absolute right-[24px] top-[50%] -translate-y-[50%]`}
+        className={`${isActiveRight ? "opacity-100" : "opacity-[.3]"} min-w-[32px] min-h-[32px] laptop:min-w-[56px] laptop:min-h-[56px] cursor-pointer z-100 absolute right-0 laptop:right-[24px] top-[50%] -translate-y-[50%]`}
       >
         <Image
           src={ArrowRight}
           width={56}
           height={56}
+          className="w-[32px] h-[32px] laptop:w-[56px] laptop:h-[56px]"
           alt="Memetaverse"
         />
       </button>

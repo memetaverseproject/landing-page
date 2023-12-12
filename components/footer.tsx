@@ -18,7 +18,7 @@ export default function MainFooter() {
     { label: 'BLOG', href: '#' }
   ]
   return (
-    <footer className="main-footer">
+    <footer className="px-[12px] laptop:px-0 main-footer">
       <div className="w-full flex items-center gap-10 mb-[88px]">
         <svg
           className="flex-1"
@@ -81,23 +81,23 @@ export default function MainFooter() {
 
       <div className="flex flex-col laptop:flex-row items-start justify-evenly gap-10 mb-[68px]">
         <div className="laptop:flex-1 max-w-[400px]">
-          <p className="text-2xl underline mb-6">
+          <p className="text-lg laptop:text-2xl underline mb-6">
             JOIN US
           </p>
-          <p className="text-body-1 font-svn text-white/60 text-justify">
+          <p className="text-body-4 laptop:text-body-1 font-svn text-white/60 text-justify">
             MEMETAVERSE is a multidimensional open-world platform where myriad Web3 projects can actively engage in
             community and enable users to partake in myriad immersive activities within the MEMETAVERSE platform.
           </p>
         </div>
         <div className="flex-1 max-w-[400px]">
-          <p className="text-2xl underline mb-6">
+          <p className="text-lg laptop:text-2xl underline mb-6">
             LINKS
           </p>
           <div className="flex flex-wrap gap-y-6">
             {
               links.map(link => (
                 <a
-                  className="w-1/3 font-svn text-body-2 italic font-semibold"
+                  className="w-1/3 font-svn text-body-4 laptop:text-body-2 italic font-semibold"
                   target="_blank"
                   rel="noopener"
                   href={link.href}
@@ -109,7 +109,7 @@ export default function MainFooter() {
           </div>
         </div>
         <div className="flex-1 max-w-[400px]">
-          <p className="text-2xl underline mb-6">
+          <p className="text-lg laptop:text-2xl underline mb-6">
             FOLLOW US
           </p>
 
@@ -138,7 +138,7 @@ export default function MainFooter() {
         style={{ background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.85) 49.48%, rgba(255, 255, 255, 0.00) 100%)' }} />
 
       <div className="py-8">
-        <p className="text-center text-subtitle-1 font-svn">
+        <p className="text-center text-subtitle-2 laptop:text-subtitle-1 font-svn">
           © All rights reserved. MEMETAVERSE
         </p>
       </div>
