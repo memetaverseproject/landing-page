@@ -34,13 +34,13 @@ export default function MainHeader() {
 
       <nav className="main-header flex items-center justify-between" id="main-header">
         <div className="flex-1 text-subtitle-1">
-          <button className="base-button clip-right flex items-center gap-2 z-[997]" onClick={() => setOpenMenu(true)}>
+          <button className="base-button clip-right flex items-center gap-2" onClick={() => setOpenMenu(true)}>
             <Image className="w-7 h-7" src={barchartIcon} width={28} height={28} alt="menu" />
             Menu
           </button>
         </div>
 
-        <div className="flex-1 flex items-center justify-center gap-3">
+        <div className="flex-1 items-center justify-center gap-3 hidden laptop:flex">
           <Image src={logo} alt="menu" />
           <div>
             <p className="text-primary text-center text-[24px] font-atmospheric">MEMETAVERSE</p>
@@ -49,13 +49,13 @@ export default function MainHeader() {
         </div>
 
         <div className="flex-1 flex items-center justify-end gap-4">
-          <div className="icon-wrapper">
+          <div className="icon-wrapper hidden laptop:block">
             <Image className="w-7 h-7" width={28} height={28} src={discordIcon} alt="discord" />
           </div>
-          <div className="icon-wrapper">
+          <div className="icon-wrapper hidden laptop:block">
             <Image className="w-7 h-7" width={28} height={28} src={twitterIcon} alt="twitter" />
           </div>
-          <div className="icon-wrapper">
+          <div className="icon-wrapper hidden laptop:block">
             <Image className="w-7 h-7" width={28} height={28} src={messengerIcon} alt="facebook" />
           </div>
 

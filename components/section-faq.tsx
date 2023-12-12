@@ -48,7 +48,7 @@ export default function SectionFaq() {
         filter: 'blur(150px)'
       }} />
 
-      <div className="flex items-center justify-between">
+      <div className="w-full flex flex-col laptop:flex-row items-center justify-center">
         <div className="flex-1 max-w-[658px]">
           <div className="inline-flex items-end gap-3 mb-4">
             <div className="bg-white w-6 h-0.5" />
@@ -57,7 +57,7 @@ export default function SectionFaq() {
             </p>
           </div>
 
-          <p className="text-white text-[56px] font-bold uppercase font-chakra mb-12"
+          <p className="text-white text-[32px] laptop:text-[56px] font-bold uppercase font-chakra mb-7 laptop:mb-12"
              style={{ textShadow: '3px 3px 0px #5A01FF' }}>
             What do you wonder?
           </p>

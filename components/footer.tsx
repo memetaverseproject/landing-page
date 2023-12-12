@@ -45,7 +45,7 @@ export default function MainFooter() {
           </defs>
         </svg>
 
-        <div className="self-end flex items-center justify-center gap-3">
+        <div className="self-end flex flex-col laptop:flex-row items-center justify-center gap-3">
           <Image src={logo} alt="menu" />
           <div>
             <p className="text-primary text-center text-[26px] font-atmospheric">MEMETAVERSE</p>
@@ -79,12 +79,12 @@ export default function MainFooter() {
         </svg>
       </div>
 
-      <div className="flex items-start justify-evenly gap-10 mb-[68px]">
-        <div className="flex-1 max-w-[400px]">
+      <div className="flex flex-col laptop:flex-row items-start justify-evenly gap-10 mb-[68px]">
+        <div className="laptop:flex-1 max-w-[400px]">
           <p className="text-2xl underline mb-6">
             JOIN US
           </p>
-          <p className="text-body-1 font-svn text-[rgba(255, 255, 255, 0.80)] text-justify">
+          <p className="text-body-1 font-svn text-white/60 text-justify">
             MEMETAVERSE is a multidimensional open-world platform where myriad Web3 projects can actively engage in
             community and enable users to partake in myriad immersive activities within the MEMETAVERSE platform.
           </p>
@@ -115,19 +115,19 @@ export default function MainFooter() {
 
           <div className="flex items-center gap-4">
             <a href="#" className="icon-wrapper">
-              <Image src={twitterIcon} alt="twitter" />
+              <Image className="w-7 h-7" src={twitterIcon} alt="twitter" />
             </a>
             <a href="#" className="icon-wrapper">
-              <Image src={discordIcon} alt="discord" />
+              <Image className="w-7 h-7" src={discordIcon} alt="discord" />
             </a>
             <a href="#" className="icon-wrapper">
-              <Image src={facebookIcon} alt="facebook" />
+              <Image className="w-7 h-7" src={facebookIcon} alt="facebook" />
             </a>
             <a href="#" className="icon-wrapper">
-              <Image src={instagramIcon} alt="instagram" />
+              <Image className="w-7 h-7" src={instagramIcon} alt="instagram" />
             </a>
             <a href="#" className="icon-wrapper">
-              <Image src={telegramIcon} alt="telegram" />
+              <Image className="w-7 h-7" src={telegramIcon} alt="telegram" />
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ import Button from './common/button'
 
 export default function SectionBanner() {
   return (
-    <div className="w-full h-[980px] flex flex-col items-center justify-center bg-red relative">
+    <div className="w-full h-screen laptop:h-[980px] flex flex-col items-center justify-center bg-red relative">
       <Image
         className='absolute'
         alt="banner"
@@ -19,8 +19,9 @@ export default function SectionBanner() {
           objectFit: 'cover',
         }}
       />
-      <div className='flex flex-row items-center justify-center z-10'>
+      <div className='flex flex-col laptop:flex-row items-center justify-center z-10'>
         <Image
+          className="w-[300px] laptop:w-[403px] laptop:h-[92px]"
           src={MemetaverseLogo}
           width={403}
           height={92}
@@ -30,6 +31,7 @@ export default function SectionBanner() {
           X
         </span>
         <Image
+          className="w-[300px] laptop:w-[403px] laptop:h-[92px]"
           src={U2ULogo}
           width={403}
           height={92}

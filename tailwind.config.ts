@@ -10,13 +10,8 @@ const config: Config = {
     extend: {
       screens: {
         'tablet': '640px',
-        // => @media (min-width: 640px) { ... }
-
         'laptop': '1024px',
-        // => @media (min-width: 1024px) { ... }
-
         'desktop': '1280px',
-        // => @media (min-width: 1280px) { ... }
       },
       colors: {
         primary: '#8E6FE7',
@@ -38,6 +33,9 @@ const config: Config = {
         'heading-4': ['18px', {
           fontWeight: 600,
         }],
+        'heading-5': ['16px', {
+          fontWeight: 600,
+        }],
         'subtitle-1': ['16px', {
           fontWeight: 600,
         }],
@@ -54,9 +52,16 @@ const config: Config = {
         'display-1':  ['36px', {
           fontWeight: 700,
         }],
+        'display-1-mobile':  ['24px', {
+          fontWeight: 700,
+        }],
         'display-2':  ['32px', {
           fontWeight: 700,
         }],
+        'display-2-mobile':  ['20px', {
+          fontWeight: 700,
+        }],
+
       }
     },
     fontFamily: {

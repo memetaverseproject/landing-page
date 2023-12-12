@@ -1,4 +1,4 @@
-import Button from "../common/Button";
+import Button from "../common/button";
 import SectionHeader from "../common/SectionHeader";
 import Character from '../../assets/intro-section/character.png'
 import BlurBG from '../../assets/intro-section/blur_bg.png'
@@ -10,21 +10,21 @@ import Image from "next/image";
 export default function SectionIntroduction() {
   return (
     <>
-      <div className="flex items-center justify-center pt-[128px] relative overflow-hidden">
+      <div className="flex flex-col laptop:flex-row items-center justify-center pt-[128px] relative overflow-hidden">
         <Image
           src={BlurBG}
           alt="Introduction background"
-          className="absolute bottom-0"
+          className="hidden laptop:block absolute bottom-0"
         />
         <Image
           src={IconLeft}
           alt="Introduction left"
-          className="absolute left-0 top-[48px]"
+          className="hidden laptop:block absolute left-0 top-[48px]"
         />
         <Image
           src={IconRight}
           alt="Introduction right"
-          className="absolute right-0 bottom-0"
+          className="hidden laptop:block absolute right-0 bottom-0"
         />
         <div className="flex flex-col z-10">
           <SectionHeader title="INTRODUCTION" />

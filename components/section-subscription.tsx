@@ -5,9 +5,9 @@ import backgroundImage from '@/assets/background/subscription-bg.svg'
 export default function SectionSubscription() {
   return (
     <div
-      className="w-full h-[1000px] flex flex-col items-center justify-center relative overflow-hidden">
+      className="w-full h-[500px] laptop:h-[1000px] flex flex-col items-center justify-center relative overflow-hidden">
       <Image className="background h-full w-full object-cover absolute" src={backgroundImage} alt="" />
-      <svg className="mb-[133px]"
+      <svg className="mb-[133px] hidden laptop:block"
            width="1920"
            height="63"
            viewBox="0 0 1920 63"
@@ -44,12 +44,12 @@ export default function SectionSubscription() {
 
       <div className="subscription-box-wrapper">
         <div className="hexagon" />
-        <div className="small-hexagon">
-          <p className="uppercase text-white text-display-1 font-chakra text-center mb-3"
+        <div className="small-hexagon p-10 laptop:p-14">
+          <p className="uppercase text-white text-display-1-mobile laptop:text-display-1 font-chakra text-center mb-3"
              style={{ textShadow: '2px 2px 0px #5A01FF' }}>
             follow us for more info
           </p>
-          <p className="text-heading-4 text-white text-center font-svn mb-10">
+          <p className="text-heading-5 laptop:text-heading-4 text-white text-center font-svn mb-7 laptop:mb-10">
             Subscribe to the MEMETAVERSE newsletter and don't miss miss out on anything.
           </p>
 
