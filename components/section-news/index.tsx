@@ -1,6 +1,6 @@
 import Carousel from '../common/Carousel'
 import SectionHeader from '../common/SectionHeader'
-import Button from '../common/button'
+import Button from '../common/Button'
 import { NewsCard, NewsCategory } from './NewsCard'
 import NewsBG from '@/assets/news-section/news-bg.png'
 
@@ -65,7 +65,7 @@ export default function SectionNews() {
           WHAT’S NEW?
         </span>
         <div className="hidden laptop:block">
-          <Button>
+          <Button onClick={() => alert("Hold tight! Something epic is brewing...")}>
             See All Posts!
           </Button>
         </div>
@@ -76,8 +76,8 @@ export default function SectionNews() {
         </Carousel>
       </div>
       <div className="laptop:hidden w-full mt-7 flex justify-center">
-        <Button>
-          See All Places!
+        <Button onClick={() => alert("Hold tight! Something epic is brewing...")}>
+          See All Posts!
         </Button>
       </div>
     </div>

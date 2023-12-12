@@ -2,7 +2,7 @@ import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
 import Carousel from "../common/Carousel";
 import PlaceCard, { PlaceStatus } from "./PlaceCard";
-import Button from "../common/button";
+import Button from "../common/Button";
 import slide1 from '@/assets/place-events/slide-1.png'
 import slide2 from '@/assets/place-events/slide-2.png'
 import slide3 from '@/assets/place-events/slide-3.png'
@@ -115,7 +115,7 @@ export default function SectionPlacesEvents() {
           </span>
         </div>
         <div className="hidden laptop:block">
-          <Button>
+          <Button onClick={() => alert("Hold tight! Something epic is brewing...")}>
             See All Places!
           </Button>
         </div>
@@ -128,7 +128,7 @@ export default function SectionPlacesEvents() {
         </Carousel>
       </div>
       <div className="laptop:hidden w-full mt-7 flex justify-center">
-        <Button>
+        <Button onClick={() => alert("Hold tight! Something epic is brewing...")}>
           See All Places!
         </Button>
       </div>

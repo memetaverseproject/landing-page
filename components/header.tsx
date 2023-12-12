@@ -59,7 +59,7 @@ export default function MainHeader() {
           {/*  <Image className="w-7 h-7" width={28} height={28} src={messengerIcon} alt="facebook" />*/}
           {/*</div>*/}
 
-          <button className="base-button clip-left flex items-center gap-2 text-subtitle-1">
+          <button className="base-button clip-left flex items-center gap-2 text-subtitle-1" onClick={() => alert("Hold tight! Something epic is brewing...")}>
             <Image className="w-7 h-7" width={28} height={28} src={joinNowIcon} alt="menu" />
             <span className="hidden laptop:block">Join now</span>
           </button>

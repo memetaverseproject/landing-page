@@ -114,10 +114,10 @@ export default function MainFooter() {
           </p>
 
           <div className="flex items-center gap-4">
-            <a href="#" className="icon-wrapper">
+            <a href="https://x.com/MemetaverseClub" target='_blank' className="icon-wrapper">
               <Image className="w-7 h-7" src={twitterIcon} alt="twitter" />
             </a>
-            <a href="#" className="icon-wrapper">
+            <a href="https://discord.gg/JvhPm4Fb" target='_blank' className="icon-wrapper">
               <Image className="w-7 h-7" src={discordIcon} alt="discord" />
             </a>
             <a href="#" className="icon-wrapper">
