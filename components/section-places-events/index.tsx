@@ -52,15 +52,41 @@ const PlacesMock = [
     creator: 'MEMETAGAMES',
     memberCount: 23,
     status: PlaceStatus.StatusOffline
+  },
+  {
+    thumbnail: "https://placehold.co/488x319",
+    title: 'Pink Flamingo - The Stronghold',
+    description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
+    creator: 'MEMETAGAMES',
+    memberCount: 23,
+    status: PlaceStatus.StatusOffline
+  },
+  {
+    thumbnail: "https://placehold.co/488x319",
+    title: 'Pink Flamingo - The Stronghold',
+    description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
+    creator: 'MEMETAGAMES',
+    memberCount: 23,
+    status: PlaceStatus.StatusOffline
+  },
+  {
+    thumbnail: "https://placehold.co/488x319",
+    title: 'Pink Flamingo - The Stronghold',
+    description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
+    creator: 'MEMETAGAMES',
+    memberCount: 23,
+    status: PlaceStatus.StatusOffline
   }
 ]
 
 export default function SectionPlacesEvents() {
   const [tab, setTab] = useState("places")
   return (
-    <div className="flex flex-col items-start px-[6%] pt-[112px]">
-      <SectionHeader title="Places & Events" />
-      <div className="flex flex-1 flex-row justify-between items-center w-full">
+    <div className="flex flex-col items-start pt-[112px] pb-[137px]">
+      <div className="px-[6%]">
+        <SectionHeader title="Places & Events" />
+      </div>
+      <div className="flex flex-1 flex-row justify-between items-center w-full px-[6%]">
         <div className="flex gap-[40px]">
           <span
             onClick={() => setTab('places')}
@@ -91,8 +117,8 @@ export default function SectionPlacesEvents() {
           </Button>
         </div>
       </div>
-      <div className="w-full pt-[50px]">
-        <Carousel>
+      <div className="w-full pt-[50px] px-[6%] relative">
+        <Carousel additionalTransfrom={-12}>
           {PlacesMock.map((i, index) => <PlaceCard key={`places-${index}`} {...i} />)}
         </Carousel>
       </div>
