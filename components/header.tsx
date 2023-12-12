@@ -52,9 +52,9 @@ export default function MainHeader() {
           <a href="https://discord.gg/JvhPm4Fb" target="_blank" rel="noopener noreferrer" className="icon-wrapper hidden laptop:block">
             <Image className="w-7 h-7" width={28} height={28} src={discordIcon} alt="discord" />
           </a>
-          {/*<div className="icon-wrapper hidden laptop:block">*/}
-          {/*  <Image className="w-7 h-7" width={28} height={28} src={twitterIcon} alt="twitter" />*/}
-          {/*</div>*/}
+          <a href="https://x.com/MemetaverseClub" target="_blank" rel="noopener noreferrer" className="icon-wrapper hidden laptop:block">
+           <Image className="w-7 h-7" width={28} height={28} src={twitterIcon} alt="twitter" />
+          </a>
           {/*<div className="icon-wrapper hidden laptop:block">*/}
           {/*  <Image className="w-7 h-7" width={28} height={28} src={messengerIcon} alt="facebook" />*/}
           {/*</div>*/}
