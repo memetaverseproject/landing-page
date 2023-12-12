@@ -2,10 +2,9 @@
   width: 100%;
   height: $header-height;
   padding: 40px;
-  z-index: 999;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 100;
 
   + div {
     padding-top: $header-height;

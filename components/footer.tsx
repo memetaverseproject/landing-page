@@ -10,7 +10,6 @@ export default function MainFooter() {
   const links = [
     { label: 'ABOUT', href: '#' },
     { label: 'TEAM', href: '#' },
-    { label: 'TEAM', href: '#' },
     { label: 'FAQs', href: '#' },
     { label: 'ECOSYSTEM', href: '#' },
     { label: 'DOCUMENTS', href: '#' },
