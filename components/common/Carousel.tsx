@@ -1,6 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode, useMemo, useRef, useState } from "react";
 import LibCarousel, { ResponsiveType } from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ArrowRight from '../../assets/icons/arrow-right-slider.png'
+import ArrowLeft from '../../assets/icons/arrow-left-slider.png'
+import Image from "next/image";
 
 const responsive = {
   superLargeDesktop: {
@@ -22,20 +25,80 @@ const responsive = {
   }
 };
 
+const CustomDot = ({ onClick, ...rest }: any) => {
+  const {
+    onMove,
+    index,
+    active,
+    carouselState: { currentSlide, deviceType }
+  } = rest;
+  // onMove means if dragging or swiping in progress.
+  // active is provided by this lib for checking if the item is active or not.
+  return (
+    <button
+      className={`${active ? "w-[60px] bg-[#FFFFFF]" : "w-[25px] bg-[#FFFFFF]/[.2]"} mx-[4px] h-[4px]`}
+      onClick={() => onClick()}
+    />
+  );
+};
+
 interface Props {
   children: ReactNode[],
   responsiveConfig?: ResponsiveType
+  additionalTransfrom?: number
 }
 
-export default function Carousel({children, responsiveConfig = responsive}: Props) {
+export default function Carousel({children, responsiveConfig = responsive, additionalTransfrom}: Props) {
+  const ref = useRef<LibCarousel>(null)
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const isActiveLeft = useMemo(() => {
+    if (!ref.current) return false
+    return currentSlide > 0
+  }, [currentSlide])
+
+  const isActiveRight = useMemo(() => {
+    if (!ref.current) return true
+    return currentSlide < (children.length - ref.current.state.slidesToShow)
+  }, [currentSlide, ref.current])
+
   return (
-    <LibCarousel
-      responsive={responsiveConfig}
-      swipeable={false}
-      draggable={false}
-      showDots={true}
-    >
-      {children}
-    </LibCarousel>
+    <>
+      <LibCarousel
+        ref={ref}
+        responsive={responsiveConfig}
+        swipeable={false}
+        draggable={false}
+        showDots={true}
+        additionalTransfrom={additionalTransfrom}
+        customDot={<CustomDot />}
+        arrows={false}
+        afterChange={(_, state) => setCurrentSlide(state.currentSlide)}
+      >
+        {children}
+      </LibCarousel>
+      <button
+        onClick={() => ref && ref.current && ref.current.previous(1)}
+        className={`${isActiveLeft ? "opacity-100" : "opacity-[.3]"} min-w-[56px] min-h-[56px] cursor-pointer z-100 absolute left-[24px] top-[50%] -translate-y-[50%]`}
+      >
+        <Image
+          src={ArrowLeft}
+          width={56}
+          height={56}
+          alt="Memetaverse"
+        />
+      </button>
+      <button
+        onClick={() => ref && ref.current && ref.current.next(1)}
+        className={`${isActiveRight ? "opacity-100" : "opacity-[.3]"} min-w-[56px] min-h-[56px] cursor-pointer z-100 absolute right-[24px] top-[50%] -translate-y-[50%]`}
+      >
+        <Image
+          src={ArrowRight}
+          width={56}
+          height={56}
+          alt="Memetaverse"
+        />
+      </button>
+    </>
   )
 }
