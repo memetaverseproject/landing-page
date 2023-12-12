@@ -6,7 +6,7 @@ export enum PlaceStatus {
 }
 
 interface Props {
-  thumbnail: string;
+  thumbnail: any;
   title: string;
   description: string;
   creator: string;

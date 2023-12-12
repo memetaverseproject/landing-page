@@ -40,9 +40,11 @@ export default function SectionIntroduction() {
           <div className="w-full text-center laptop:text-left laptop:w-[464px] font-svn text-[16px] font-normal leading-[22px] text-[#FFFFFF]/[.8] mt-[24px] mb-[48px]">
             Step into the MEMETAVERSE, a dynamic open-world platform that unites numerous Web3 projects and a thriving community, offering users an array of immersive experiences within this expansive digital realm.
           </div>
-          <Button>
-            JOIN US BUILD THE WORLD
-          </Button>
+          <a href="https://docs.memetaverse.club/contact-us/for-partnership" target="_blank" rel="noopener noreferrer">
+            <Button>
+              JOIN US BUILD THE WORLD
+            </Button>
+          </a>
         </div>
         <div className="z-10">
           <Image

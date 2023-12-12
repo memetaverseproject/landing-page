@@ -10,19 +10,19 @@ import Link from 'next/link'
 
 export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
   const navs = [
-    { label: 'MEMETAVERSE', icon: logo, href: '#' },
-    { label: 'ECOSYSTEM', icon: ecosystemIcon, href: '#' },
-    { label: 'Documents', icon: documentsIcon, href: '#' },
-    { label: 'Team', icon: teamIcon, href: '#' },
-    { label: 'Blog', icon: blogIcon, href: '#' },
-    { label: 'Contact us', icon: contactUsIcon, href: '#' }
+    // { label: 'MEMETAVERSE', icon: logo, href: '#' },
+    { label: 'ECOSYSTEM', icon: ecosystemIcon, href: 'https://docs.memetaverse.club/ecosystem' },
+    { label: 'Documents', icon: documentsIcon, href: 'https://docs.memetaverse.club/' },
+    { label: 'Team', icon: teamIcon, href: 'https://docs.memetaverse.club/team' },
+    // { label: 'Blog', icon: blogIcon, href: '#' },
+    { label: 'Contact us', icon: contactUsIcon, href: 'https://docs.memetaverse.club/contact-us' }
   ]
 
   return (
     <>
       <div className={`sidebar-overlay ${isOpen ? 'block' : 'hidden'}`} onClick={onClose} />
       <div className={`sidebar-content laptop:w-[436px] w-full transition-all py-14 laptop:py-10 ${isOpen ? 'open' : ''}`}>
-        <button className="base-button  top-[20px] absolute right-0 laptop:right-[-50px]" onClick={onClose}>
+        <button className="base-button top-[20px] absolute right-0 laptop:right-[-72px]" onClick={onClose}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M18 6L6 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -34,7 +34,7 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
             navs.map(nav => (
               <li className="flex items-start gap-4 cursor-pointer" key={nav.label}>
                 <Image className="w-[30px]" src={nav.icon} alt="" />
-                <Link href={nav.href} className="">
+                <Link href={nav.href} target="_blank" className="">
                   <p className="text-heading-3 font-svn uppercase tracking-none mb-6">
                     {nav.label}
                   </p>
@@ -50,29 +50,29 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
           }
         </ul>
 
-        <div className="w-full relative overflow-x-hidden">
-          <Image className="w-full" width={356} src={HighlightCardBg} alt="" />
-          <div className="w-full p-7 laptop:p-0 max-w-[308px] laptop:absolute laptop:bottom-[64px] laptop:left-[64px]">
-            <p className="text-display-2 font-chakra uppercase">Big Gift Daily</p>
-            <div className="bg-white h-[2px] w-10 mb-6" />
-            <p className="text-heading-3 font-svn capitalizemb-3">
-              Pink Flamingo - The Stronghold
-            </p>
-            <p className="text-body-4 font-svn text-[rgba(255, 255, 255, 0.65)] mb-5">
-              Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor
-              sit...
-            </p>
+        {/*<div className="w-full relative overflow-x-hidden">*/}
+        {/*  <Image className="w-full" width={356} src={HighlightCardBg} alt="" />*/}
+        {/*  <div className="w-full p-7 laptop:p-0 max-w-[308px] laptop:absolute laptop:bottom-[64px] laptop:left-[64px]">*/}
+        {/*    <p className="text-display-2 font-chakra uppercase">Big Gift Daily</p>*/}
+        {/*    <div className="bg-white h-[2px] w-10 mb-6" />*/}
+        {/*    <p className="text-heading-3 font-svn capitalizemb-3">*/}
+        {/*      Pink Flamingo - The Stronghold*/}
+        {/*    </p>*/}
+        {/*    <p className="text-body-4 font-svn text-[rgba(255, 255, 255, 0.65)] mb-5">*/}
+        {/*      Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor*/}
+        {/*      sit...*/}
+        {/*    </p>*/}
 
-            <div className="flex items-center gap-3">
-              <p className="text-subtitle-1 font-svn">Let’s go</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M19 12H5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M14 17L19 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M14 7L19 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </div>
-        </div>
+        {/*    <div className="flex items-center gap-3">*/}
+        {/*      <p className="text-subtitle-1 font-svn">Let’s go</p>*/}
+        {/*      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">*/}
+        {/*        <path d="M19 12H5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>*/}
+        {/*        <path d="M14 17L19 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>*/}
+        {/*        <path d="M14 7L19 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>*/}
+        {/*      </svg>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </>
   )

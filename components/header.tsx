@@ -49,15 +49,15 @@ export default function MainHeader() {
         </div>
 
         <div className="flex-1 flex items-center justify-end gap-4">
-          <div className="icon-wrapper hidden laptop:block">
+          <a href="https://discord.gg/JvhPm4Fb" target="_blank" rel="noopener noreferrer" className="icon-wrapper hidden laptop:block">
             <Image className="w-7 h-7" width={28} height={28} src={discordIcon} alt="discord" />
-          </div>
-          <div className="icon-wrapper hidden laptop:block">
-            <Image className="w-7 h-7" width={28} height={28} src={twitterIcon} alt="twitter" />
-          </div>
-          <div className="icon-wrapper hidden laptop:block">
-            <Image className="w-7 h-7" width={28} height={28} src={messengerIcon} alt="facebook" />
-          </div>
+          </a>
+          {/*<div className="icon-wrapper hidden laptop:block">*/}
+          {/*  <Image className="w-7 h-7" width={28} height={28} src={twitterIcon} alt="twitter" />*/}
+          {/*</div>*/}
+          {/*<div className="icon-wrapper hidden laptop:block">*/}
+          {/*  <Image className="w-7 h-7" width={28} height={28} src={messengerIcon} alt="facebook" />*/}
+          {/*</div>*/}
 
           <button className="base-button clip-left flex items-center gap-2 text-subtitle-1">
             <Image className="w-7 h-7" width={28} height={28} src={joinNowIcon} alt="menu" />

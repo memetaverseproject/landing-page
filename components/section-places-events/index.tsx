@@ -3,10 +3,13 @@ import SectionHeader from "../common/SectionHeader";
 import Carousel from "../common/Carousel";
 import PlaceCard, { PlaceStatus } from "./PlaceCard";
 import Button from "../common/button";
+import slide1 from '@/assets/place-events/slide-1.png'
+import slide2 from '@/assets/place-events/slide-2.png'
+import slide3 from '@/assets/place-events/slide-3.png'
 
 const PlacesMock = [
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide1,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -14,7 +17,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusLive
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide2,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -22,7 +25,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusOffline
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide3,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -30,7 +33,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusLive
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide1,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -38,7 +41,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusLive
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide2,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -46,7 +49,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusLive
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide3,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -54,7 +57,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusOffline
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide1,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -62,7 +65,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusOffline
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide2,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -70,7 +73,7 @@ const PlacesMock = [
     status: PlaceStatus.StatusOffline
   },
   {
-    thumbnail: "https://placehold.co/488x319",
+    thumbnail: slide3,
     title: 'Pink Flamingo - The Stronghold',
     description: 'Lorem ipsum dolor sit amet consectetur. Tristique pulvinar leo quis sed massa integer et ipsum dolor sit ornare et.',
     creator: 'MEMETAGAMES',
@@ -94,7 +97,7 @@ export default function SectionPlacesEvents() {
             style={{
               textShadow: tab === 'places' ? '3px 3px 0px #5A01FF' : '',
               color: tab === 'places' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.30)',
-              borderBottomColor: tab === 'places' ? '#FFFFFF': 'transparent'
+              borderBottomColor: tab === 'places' ? '#FFFFFF' : 'transparent'
             }}
           >
             PLACES
@@ -105,7 +108,7 @@ export default function SectionPlacesEvents() {
             style={{
               textShadow: tab === 'events' ? '3px 3px 0px #5A01FF' : '',
               color: tab === 'events' ? '#FFFFFF' : 'rgba(255, 255, 255, 0.30)',
-              borderBottomColor: tab === 'events' ? '#FFFFFF': 'transparent'
+              borderBottomColor: tab === 'events' ? '#FFFFFF' : 'transparent'
             }}
           >
             EVENTS
@@ -119,7 +122,9 @@ export default function SectionPlacesEvents() {
       </div>
       <div className="w-full pt-[24px] laptop:pt-[50px] px-[40px] laptop:px-[6%] relative">
         <Carousel additionalTransfrom={-12}>
-          {PlacesMock.map((i, index) => <PlaceCard key={`places-${index}`} {...i} />)}
+          {PlacesMock.map((i, index) =>
+            (<PlaceCard key={`places-${index}`} {...i} />)
+          )}
         </Carousel>
       </div>
       <div className="laptop:hidden w-full mt-7 flex justify-center">

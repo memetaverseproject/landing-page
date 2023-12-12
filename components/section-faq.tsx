@@ -8,28 +8,23 @@ export default function SectionFaq() {
   const questions = [
     {
       question: 'What is MEMETAVERSE?',
-      answer: `Lorem ipsum dolor sit amet consectetur. Enim in risus nulla porttitor at vel ut sed. Magna eget ullamcorper nunc morbi id aenean augue ut. Fermentum ut lectus enim suspendisse. In tempus non et id nec. Consequat sagittis lectus elementum diam orci. Justo etiam eu aliquam ornare justo blandit elementum. Ac porttitor lectus mi sit venenatis morbi augue. Id nunc vitae aliquet volutpat.
-                Massa tincidunt feugiat fringilla lorem ultrices nulla. Viverra sapien arcu aenean risus eget viverra auctor nunc. Blandit non enim odio gravida.`
+      answer: `https://docs.memetaverse.club/`
     },
     {
       question: 'How do I enter MEMETAVERSE?',
-      answer: `Lorem ipsum dolor sit amet consectetur. Enim in risus nulla porttitor at vel ut sed. Magna eget ullamcorper nunc morbi id aenean augue ut. Fermentum ut lectus enim suspendisse. In tempus non et id nec. Consequat sagittis lectus elementum diam orci. Justo etiam eu aliquam ornare justo blandit elementum. Ac porttitor lectus mi sit venenatis morbi augue. Id nunc vitae aliquet volutpat.
-                Massa tincidunt feugiat fringilla lorem ultrices nulla. Viverra sapien arcu aenean risus eget viverra auctor nunc. Blandit non enim odio gravida.`
+      answer: `https://docs.memetaverse.club/getting-started`
     },
     {
       question: 'Do I need cryptocurrency or a crypto wallet to use MEMETAVERSE?',
-      answer: `Lorem ipsum dolor sit amet consectetur. Enim in risus nulla porttitor at vel ut sed. Magna eget ullamcorper nunc morbi id aenean augue ut. Fermentum ut lectus enim suspendisse. In tempus non et id nec. Consequat sagittis lectus elementum diam orci. Justo etiam eu aliquam ornare justo blandit elementum. Ac porttitor lectus mi sit venenatis morbi augue. Id nunc vitae aliquet volutpat.
-                Massa tincidunt feugiat fringilla lorem ultrices nulla. Viverra sapien arcu aenean risus eget viverra auctor nunc. Blandit non enim odio gravida.`
+      answer: `https://docs.memetaverse.club/faq`
     },
     {
       question: 'How do I build on MEMETAVERSE?',
-      answer: `Lorem ipsum dolor sit amet consectetur. Enim in risus nulla porttitor at vel ut sed. Magna eget ullamcorper nunc morbi id aenean augue ut. Fermentum ut lectus enim suspendisse. In tempus non et id nec. Consequat sagittis lectus elementum diam orci. Justo etiam eu aliquam ornare justo blandit elementum. Ac porttitor lectus mi sit venenatis morbi augue. Id nunc vitae aliquet volutpat.
-                Massa tincidunt feugiat fringilla lorem ultrices nulla. Viverra sapien arcu aenean risus eget viverra auctor nunc. Blandit non enim odio gravida.`
+      answer: `https://docs.memetaverse.club/build-on-memetaverse`
     },
     {
       question: 'How can I get help and contact the Support Team?',
-      answer: `Lorem ipsum dolor sit amet consectetur. Enim in risus nulla porttitor at vel ut sed. Magna eget ullamcorper nunc morbi id aenean augue ut. Fermentum ut lectus enim suspendisse. In tempus non et id nec. Consequat sagittis lectus elementum diam orci. Justo etiam eu aliquam ornare justo blandit elementum. Ac porttitor lectus mi sit venenatis morbi augue. Id nunc vitae aliquet volutpat.
-                Massa tincidunt feugiat fringilla lorem ultrices nulla. Viverra sapien arcu aenean risus eget viverra auctor nunc. Blandit non enim odio gravida.`
+      answer: `https://docs.memetaverse.club/contact-us/customer-support`
     }
   ]
 
@@ -65,18 +60,19 @@ export default function SectionFaq() {
           <div className="flex flex-col gap-6">
             {
               questions.map((item, index) => (
-                <Collapsible
-                  key={index}
-                  renderExpanded={
-                    <p className="text-body-2 font-svn text-white">
-                      {item.answer}
-                    </p>
-                  }
-                  expanded={expanded === index}
-                  toggle={() => handleExpandItem(index)}
-                >
-                  <p className="text-subtitle-1 font-svn">{item.question}</p>
-                </Collapsible>
+                <a key={index} href={item.answer} target="_blank" rel="noopener noreferrer">
+                  <Collapsible
+                    // renderExpanded={
+                    //   <a href={item.answer} className="text-body-2 font-svn text-white">
+                    //     {item.answer}
+                    //   </a>
+                    // }
+                    expanded={expanded === index}
+                    toggle={() => handleExpandItem(index)}
+                  >
+                    <p className="text-subtitle-1 font-svn">&#x2022; {item.question}</p>
+                  </Collapsible>
+                </a>
               ))
             }
           </div>
