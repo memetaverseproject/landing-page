@@ -2,7 +2,7 @@ import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
 import Carousel from "../common/Carousel";
 import PlaceCard, { PlaceStatus } from "./PlaceCard";
-import Button from "../common/Button";
+import Button from "../common/button";
 import slide1 from '@/assets/place-events/slide-1.png'
 import slide2 from '@/assets/place-events/slide-2.png'
 import slide3 from '@/assets/place-events/slide-3.png'

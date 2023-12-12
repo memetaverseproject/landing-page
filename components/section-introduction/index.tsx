@@ -1,4 +1,4 @@
-import Button from "../common/Button";
+import Button from "../common/button";
 import SectionHeader from "../common/SectionHeader";
 import Character from '../../assets/intro-section/character.png'
 import BlurBG from '../../assets/intro-section/blur_bg.png'

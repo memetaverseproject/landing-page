@@ -2,7 +2,7 @@ import SectionHeader from "../common/SectionHeader";
 import AceCards from '../../assets/casino-section/ace-cards.png'
 import BlurBG from '../../assets/casino-section/blur_bg.png'
 import Image from "next/image";
-import Button from "../common/Button";
+import Button from "../common/button";
 
 export default function SectionCasino() {
   return (

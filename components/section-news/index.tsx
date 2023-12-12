@@ -1,6 +1,6 @@
 import Carousel from '../common/Carousel'
 import SectionHeader from '../common/SectionHeader'
-import Button from '../common/Button'
+import Button from '../common/button'
 import { NewsCard, NewsCategory } from './NewsCard'
 import NewsBG from '@/assets/news-section/news-bg.png'
 
