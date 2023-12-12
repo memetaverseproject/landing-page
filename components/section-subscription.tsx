@@ -43,7 +43,7 @@ export default function SectionSubscription() {
       </svg>
 
       <div className="px-[12px] laptop:px-0 w-full">
-        <div className="subscription-box-wrapper">
+        <div className="subscription-box-wrapper mx-auto">
           <div className="hexagon" />
           <div className="small-hexagon p-10 laptop:p-14">
             <p className="uppercase text-white text-display-1-mobile laptop:text-display-1 font-chakra text-center mb-3"
