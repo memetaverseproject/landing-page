@@ -1,8 +1,8 @@
 import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
-import Button from "../common/Button";
 import Carousel from "../common/Carousel";
 import PlaceCard, { PlaceStatus } from "./PlaceCard";
+import Button from "../common/button";
 
 const PlacesMock = [
   {
