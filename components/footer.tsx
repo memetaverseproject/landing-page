@@ -8,13 +8,13 @@ import telegramIcon from '@/assets/icons/telegram.svg'
 
 export default function MainFooter() {
   const links = [
-    { label: 'ABOUT', href: '#' },
-    { label: 'TEAM', href: '#' },
-    { label: 'FAQs', href: '#' },
-    { label: 'ECOSYSTEM', href: '#' },
-    { label: 'DOCUMENTS', href: '#' },
-    { label: 'CONTACT US', href: '#' },
-    { label: 'SOCIAL HUB', href: '#' },
+    { label: 'ABOUT', href: 'https://docs.memetaverse.club/' },
+    { label: 'TEAM', href: 'https://docs.memetaverse.club/team' },
+    { label: 'FAQs', href: 'https://docs.memetaverse.club/faq' },
+    { label: 'ECOSYSTEM', href: 'https://docs.memetaverse.club/ecosystem' },
+    { label: 'DOCUMENTS', href: 'https://docs.memetaverse.club/' },
+    { label: 'CONTACT US', href: 'https://docs.memetaverse.club/contact-us' },
+    // { label: 'SOCIAL HUB', href: '#' },
     { label: 'BLOG', href: '#' }
   ]
   return (
@@ -120,7 +120,7 @@ export default function MainFooter() {
             <a href="https://discord.gg/JvhPm4Fb" target='_blank' className="icon-wrapper">
               <Image className="w-7 h-7" src={discordIcon} alt="discord" />
             </a>
-            <a href="#" className="icon-wrapper">
+            {/* <a href="#" className="icon-wrapper">
               <Image className="w-7 h-7" src={facebookIcon} alt="facebook" />
             </a>
             <a href="#" className="icon-wrapper">
@@ -128,7 +128,7 @@ export default function MainFooter() {
             </a>
             <a href="#" className="icon-wrapper">
               <Image className="w-7 h-7" src={telegramIcon} alt="telegram" />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
