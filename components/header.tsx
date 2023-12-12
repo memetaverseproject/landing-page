@@ -30,9 +30,11 @@ export default function MainHeader() {
 
   return (
     <>
+      <SidebarMenu isOpen={openMenu} onClose={() => setOpenMenu(false)} />
+
       <nav className="main-header flex items-center justify-between" id="main-header">
         <div className="flex-1 text-subtitle-1">
-          <button className="base-button clip-right flex items-center gap-2" onClick={() => setOpenMenu(true)}>
+          <button className="base-button clip-right flex items-center gap-2 z-[997]" onClick={() => setOpenMenu(true)}>
             <Image src={barchartIcon} alt="menu" />
             Menu
           </button>
@@ -64,7 +66,6 @@ export default function MainHeader() {
         </div>
       </nav>
 
-      <SidebarMenu isOpen={openMenu} onClose={() => setOpenMenu(false)} />
     </>
   )
 }

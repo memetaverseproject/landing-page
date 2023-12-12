@@ -19,8 +19,8 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
   ]
 
   return (
-    <>
-      <div className="sidebar-overlay" onClick={onClose} />
+    <div className="sidebar-menu">
+      <div className={`sidebar-overlay ${isOpen ? 'block' : 'hidden'}`} onClick={onClose} />
       <div className={`sidebar-content transition-all py-10 relative ${isOpen ? 'open' : ''}`}>
         <button className="base-button clip-right absolute right-[-72px]" onClick={onClose}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -74,6 +74,6 @@ export default function SidebarMenu({ isOpen, onClose }: { isOpen: boolean, onCl
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
