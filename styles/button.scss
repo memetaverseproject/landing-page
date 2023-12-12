@@ -2,6 +2,7 @@
   background: ($gradient-button, linear-gradient(91deg, #8E6FE7 0%, #923DE7 100%));
   filter: drop-shadow(0px 12px 40px rgba(151, 71, 255, 0.30));
   padding: 8px 24px;
+  white-space: nowrap;
 
   &.clip-right {
     clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%, 0% 50%);

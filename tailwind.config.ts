@@ -8,6 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
       colors: {
         primary: '#8E6FE7',
         'meme-olet': '#8E6FE7',

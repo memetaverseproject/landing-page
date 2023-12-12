@@ -2,7 +2,7 @@
 
 import barchartIcon from '@/assets/icons/bar-chart.svg'
 import logo from '@/assets/icons/logo.svg'
-import walletIcon from '@/assets/icons/wallet.svg'
+import joinNowIcon from '@/assets/icons/join-now.svg'
 import discordIcon from '@/assets/icons/discord.svg'
 import twitterIcon from '@/assets/icons/twitter.svg'
 import messengerIcon from '@/assets/icons/messenger.svg'
@@ -35,7 +35,7 @@ export default function MainHeader() {
       <nav className="main-header flex items-center justify-between" id="main-header">
         <div className="flex-1 text-subtitle-1">
           <button className="base-button clip-right flex items-center gap-2 z-[997]" onClick={() => setOpenMenu(true)}>
-            <Image src={barchartIcon} alt="menu" />
+            <Image className="w-7 h-7" src={barchartIcon} width={28} height={28} alt="menu" />
             Menu
           </button>
         </div>
@@ -50,18 +50,18 @@ export default function MainHeader() {
 
         <div className="flex-1 flex items-center justify-end gap-4">
           <div className="icon-wrapper">
-            <Image src={discordIcon} alt="discord" />
+            <Image className="w-7 h-7" width={28} height={28} src={discordIcon} alt="discord" />
           </div>
           <div className="icon-wrapper">
-            <Image src={twitterIcon} alt="twitter" />
+            <Image className="w-7 h-7" width={28} height={28} src={twitterIcon} alt="twitter" />
           </div>
           <div className="icon-wrapper">
-            <Image src={messengerIcon} alt="facebook" />
+            <Image className="w-7 h-7" width={28} height={28} src={messengerIcon} alt="facebook" />
           </div>
 
           <button className="base-button clip-left flex items-center gap-2 text-subtitle-1">
-            <Image src={walletIcon} alt="menu" />
-            Connect
+            <Image className="w-7 h-7" width={28} height={28} src={joinNowIcon} alt="menu" />
+            Join now
           </button>
         </div>
       </nav>
