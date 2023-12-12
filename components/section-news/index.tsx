@@ -57,14 +57,14 @@ export default function SectionNews() {
       </div>
       <div className="flex flex-1 flex-row justify-between items-center w-full px-[6%]">
         <span
-          className="font-chakra text-[56px] text-[#FFFFFF] font-bold leading-normal cursor-pointer"
+          className="font-chakra text-[32px] laptop:text-[56px] text-[#FFFFFF] font-bold leading-normal cursor-pointer"
           style={{
-            textShadow: '3px 3px 0px #5A01FF',
+            textShadow: '3px 3px 0px #5A01FF'
           }}
         >
           WHAT’S NEW?
         </span>
-        <div>
+        <div className="hidden laptop:block">
           <Button>
             See All Posts!
           </Button>
@@ -74,6 +74,11 @@ export default function SectionNews() {
         <Carousel additionalTransfrom={-12}>
           {NewsMock.map((i, index) => <NewsCard key={`news-${index}`} {...i} />)}
         </Carousel>
+      </div>
+      <div className="laptop:hidden w-full mt-7 flex justify-center">
+        <Button>
+          See All Places!
+        </Button>
       </div>
     </div>
   )
