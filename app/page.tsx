@@ -6,6 +6,7 @@ import SectionEcosystem from '@/components/section-ecosystem'
 import SectionFaq from '@/components/section-faq'
 import SectionPlacesEvents from '@/components/section-places-events'
 import SectionCasino from '@/components/section-casino'
+import SectionNews from '@/components/section-news'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SectionIntroduction />
       <SectionPlacesEvents />
       <SectionCasino />
+      <SectionNews />
       <SectionEcosystem />
       <SectionFaq />
       <SectionSubscription />
