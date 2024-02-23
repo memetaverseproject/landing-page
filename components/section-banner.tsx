@@ -2,7 +2,7 @@ import MemetaverseLogo from '../assets/logo/memetaverse.png'
 import U2ULogo from '../assets/logo/ultra_unicorn.png'
 import BannerBG from '../assets/banner_bg.png'
 import Image from 'next/image'
-import Button from './common/button'
+import ButtonLink from './common/ButtonLink'
 
 export default function SectionBanner() {
   return (
@@ -39,9 +39,13 @@ export default function SectionBanner() {
         />
       </div>
       <div className='z-10 pt-[64px]'>
-        <Button onClick={() => alert("Hold tight! Something epic is brewing...")}>
+        <ButtonLink href='https://testnet-play.memetaverse.club' target='_blank'>
           OPEN THE WORLD!
-        </Button>
+        </ButtonLink>
+
+        <ButtonLink className='ml-[20px] button-blue base-button clip-left text-[#FFFFFF]' href='https://testnet-play.memetaverse.club/?realm=artemis&position=-121,-121' target='_blank'>
+          JOIN CASINO
+        </ButtonLink>
       </div>
     </div>
   )
